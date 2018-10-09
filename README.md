@@ -50,10 +50,6 @@ This project is developed to showcase my following programming abilities:
 Here,  nH,nW  and  nC  are the height, width and number of channels of the hidden layer we have chosen, and appear in a normalization term in the cost.
 </p><br/>
 
-<p>The earlier (shallower) layers of a ConvNet tend to detect lower-level features such as edges and simple textures, and the later (deeper) layers tend to detect higher-level features such as more complex textures as well as object classes.<br/><br/><img src="https://github.com/adityachandupatla/neural_style_transfer/blob/master/images/hidden_layers.png" /><br/><br/>We would like the "generated" image G to have similar content as the input image C. Let us pick one particular hidden layer to use. Now, we'll set the image C as the input to the pretrained VGG network, and run forward propagation. Let  a(C)  be the hidden layer activations in the layer we had chosen. This will be a  nH×nW×nC  tensor. Repeat this process with the image G: Set G as the input, and run forward progation. Let a(G) be the corresponding hidden layer activation.</p><br/>
-<p>The style matrix is also called a "Gram matrix." In linear algebra, the Gram matrix G of a set of vectors  (v1,…,vn)  is the matrix of dot products, whose entries are  Gij = np.dot(vi,vj) . In other words,  Gij  compares how similar  vi  is to  vj : If they are highly similar, we would expect them to have a large dot product, and thus for Gij to be large.<br/><img src="https://github.com/adityachandupatla/neural_style_transfer/blob/master/images/gram.png" />
-</p><br/>
-
 <p>The generated images are saved in the output folder. You can see the following example for inspiration:<br/>
 
 <h3>Content image</h3> <img src="https://github.com/adityachandupatla/neural_style_transfer/blob/master/images/my_goa_image.jpg"  width="400" height="300" />(This is an image of mine, from Goa trip!)
